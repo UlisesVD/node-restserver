@@ -19,7 +19,7 @@ let urlBD;
 if (process.env.NODE_ENV === 'dev') {
     urlBD = 'mongodb://localhost:27017/cafe';
 } else {
-    urlBD = 'mongodb+srv://mongo:mongo123@nodedb-8zgim.mongodb.net/test?retryWrites=true&w=majority';
+    urlBD = precess.env.MONGO_URI;
 }
 
 process.env.URLDB = urlBD
